@@ -18,7 +18,7 @@ export default function NavbarCom() {
     }
   return (
     <Navbar isBordered  variant={'sticky'}>
-    <Navbar.Brand>
+    <Navbar.Brand hideIn="xs">
       
       <h4  style={{fontFamily:'futura, sans-serif', fontWeight:400}}  >
         Ulises Mora
