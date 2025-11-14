@@ -13,7 +13,7 @@ import berry from "../../public/berry.png"
 import ai from "../../public/ai.jpeg"
 import previous from "../../public/Previous.png"
 import { useRouter } from "next/router";
-
+import vineren from "../../public/vin.png"
 
 export default function ProjectCards() {
 
@@ -25,6 +25,9 @@ export default function ProjectCards() {
 
   return (
     <Grid.Container gap={3} justify="center">
+       <Grid onClick={() => GoToProject("vinneren")} xs={12} sm={6}>
+        <CardDesign  title={"AR Expo"} subtitle={"AR Expo Vinneren  "} image={vineren.src} isUnity={true} />
+      </Grid>
       <Grid onClick={() => GoToProject("apartment")} xs={12} sm={6}>
         <CardDesign  title={"VR Apartment"} subtitle={"VR experience to dynamic apartment "} image={vrapartment.src} isUnity={false} />
       </Grid>

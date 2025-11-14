@@ -9,10 +9,11 @@ interface Articles {
     urlvideo: string | null,
     images: string[] | null
     videos: string[] | null
+    nativeVideo?: string[] | null
 }
 
 
-export default function Article({ title, description, urlvideo, images, videos }: Articles) {
+export default function Article({ title, description, urlvideo, images, videos, nativeVideo }: Articles) {
     return (
         <>
             <NavbarCom />
@@ -50,6 +51,19 @@ export default function Article({ title, description, urlvideo, images, videos }
                         {images.map((content, index) => (
                             <Grid key={index} xs={12} sm={6}>
                                     <Image src={content}></Image>
+                            </Grid>
+                        ))}
+                    </Grid.Container>
+                }
+
+                 {nativeVideo != null &&
+                    <Grid.Container gap={3} justify="center">
+                        {nativeVideo.map((content, index) => (
+                            <Grid key={index} xs={12} sm={6}>
+                                <video width="100%" height={"400px"} controls>
+        <source src="./videos/vin.mp4" type="video/mp4" />
+        Tu navegador no soporta la etiqueta de video.
+      </video>
                             </Grid>
                         ))}
                     </Grid.Container>
