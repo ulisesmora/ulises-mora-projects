@@ -14,6 +14,7 @@ import ai from "../../public/ai.jpeg"
 import previous from "../../public/Previous.png"
 import { useRouter } from "next/router";
 import vineren from "../../public/vin.png"
+import exposed from "../../public/exposed.png"
 
 export default function ProjectCards() {
 
@@ -25,6 +26,9 @@ export default function ProjectCards() {
 
   return (
     <Grid.Container gap={3} justify="center">
+      <Grid onClick={() => GoToProject("exposed")} xs={12} sm={6}>
+        <CardDesign  title={"Exposed"} subtitle={"My Videogame in process  "} image={exposed.src} isUnity={true} />
+      </Grid>
        <Grid onClick={() => GoToProject("vinneren")} xs={12} sm={6}>
         <CardDesign  title={"AR Expo"} subtitle={"AR Expo Vinneren  "} image={vineren.src} isUnity={true} />
       </Grid>
